@@ -1,0 +1,14 @@
+version: "3"
+services:
+  node-compose:
+    build: ./node
+    image: node
+    container_name: node-compose
+    ports:
+      - 3000:3000
+  nginx-compose:
+    build: ./nginx
+    image: nginx
+    container_name: nginx-compose
+    ports:
+      - 8080:80
